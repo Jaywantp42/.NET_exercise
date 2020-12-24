@@ -1,0 +1,46 @@
+﻿@model UserLogin.Models.User
+
+@{
+    ViewBag.Title = "homepage";
+}
+
+<h2>homepage</h2>
+
+<div>
+
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+    </dl>
+  
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LoginName }) |
+    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("LogOut", "Logout")
+</p>
